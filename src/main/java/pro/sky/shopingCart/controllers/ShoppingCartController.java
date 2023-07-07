@@ -8,6 +8,7 @@ import pro.sky.shopingCart.ShoppingCartItem;
 import pro.sky.shopingCart.services.ShoppingCartService;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/store/order")
@@ -24,7 +25,7 @@ public class ShoppingCartController {
     }
 
     @GetMapping(path = "/get")
-    public List<Integer> getCartItems() {
+    public Set<ShoppingCartItem> getCartItems() {
         return shoppingCartService.getCartItems();
     }
 

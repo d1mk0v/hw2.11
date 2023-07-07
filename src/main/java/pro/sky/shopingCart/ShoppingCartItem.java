@@ -6,8 +6,8 @@ public class ShoppingCartItem {
     private int ID;
 //    private String name;
 
-    public ShoppingCartItem(int id) {
-        this.ID = id;
+    public ShoppingCartItem(int ID) {
+        this.ID = ID;
 //        this.name = name;
     }
 
