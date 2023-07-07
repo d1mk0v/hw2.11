@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.sky.shopingCart.ShoppingCartItem;
 import pro.sky.shopingCart.services.ShoppingCartService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/store/order")
 public class ShoppingCartController {
@@ -22,7 +24,7 @@ public class ShoppingCartController {
     }
 
     @GetMapping(path = "/get")
-    public ShoppingCartItem getCartItems() {
+    public List<Integer> getCartItems() {
         return shoppingCartService.getCartItems();
     }
 

@@ -5,7 +5,9 @@ import org.springframework.web.context.annotation.RequestScope;
 import pro.sky.shopingCart.ShoppingCartItem;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequestScope
@@ -19,7 +21,9 @@ public abstract class ShoppingCartServiceImpl implements ShoppingCartService {
         return item;
     }
 
-    public ShoppingCartItem getCartItems() {
-        return null;
+    public List<Integer> getCartItems() {
+        return items.stream()
+                .map(ShoppingCartItem::getID)
+                .collect(Collectors.toList());
     }
 }
